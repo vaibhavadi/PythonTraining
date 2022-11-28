@@ -1,0 +1,47 @@
+# get place
+sentence = "This is the data for Chennai: cwd@gov.nic.in Sun Nov 11 2022 42.8|41.7 End of Data"
+position = sentence.find('Chennai')
+print(position)
+colon_position = sentence.find(':')
+print(colon_position)
+print (sentence[position:colon_position])
+
+place = "Chennai"
+print(place.upper())
+
+#get email
+sentence = "This is the data for Chennai: cwd@gov.nic.in Sun Nov 11 2022 42.8|41 End of Data"
+position = sentence.find('Chennai')
+colon_position = sentence.find(':')
+
+sentence_email = sentence[colon_position + 1:] 
+sentence_email = sentence_email.strip() 
+print(sentence_email, sentence_email.strip())
+space_position = sentence_email.find(' ')
+print(space_position)
+email = sentence_email[0:space_position]
+print(email)
+
+email_id = "cwd@gov.nic.in"
+print (email_id.lower(), email_id.upper())
+
+#get day
+sen_day = sentence_email[space_position +1:]
+print(sen_day)
+space_position = sen_day.find(' ')
+print(sen_day[:space_position])
+
+day = "Sun"
+print (day.lower(), day.upper())
+
+#get month
+sen_month = sen_day[space_position + 1:]
+print(sen_month)
+space_position = sen_month.find(' ')
+print(space_position)
+print(sen_month[:space_position])
+month = "Nov"
+print (month.lower(), month.upper())
+
+#get the date
+
